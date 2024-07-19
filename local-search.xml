@@ -8,7 +8,7 @@
     <link href="/2024/02/01/hello-world/"/>
     <url>/2024/02/01/hello-world/</url>
     
-    <content type="html"><![CDATA[<p>指令集合：</p><blockquote><p> hexo cl&amp;&amp;hexo g&amp;&amp;hexo s</p><p> hexo d</p></blockquote><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>指令集合：</p><blockquote><p> hexo cl&amp;&amp;hexo g&amp;&amp;hexo s</p><p> hexo d</p><p> git add . &amp;&amp;git commit -m “Update blog content” &amp;&amp;git push origin master</p></blockquote><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
     
     
     <categories>
