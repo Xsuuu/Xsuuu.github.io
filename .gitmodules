@@ -1,3 +1,3 @@
 [submodule ".deploy_git"]
-	path = .deploy_git
-	url = https://github.com/Xsuuu/Xsuuu.github.io
+    path = .deploy_git
+    url = https://github.com/Xsuuu/Xsuuu.github.io
