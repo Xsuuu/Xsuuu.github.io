@@ -1,5 +1,5 @@
 ---
-title: 博客创建
+title: 博客日常更新指令
 index_img: /img/bg/1.jpg
 banner_img: /img/bg/1.jpg
 author: XiaoSu
@@ -10,8 +10,9 @@ tags: Note
 指令集合：
 
 >  hexo cl&&hexo g&&hexo s
->
+>(清除缓存+生成更改+测试网页)
 >  hexo d
+>(推送到服务器)
 
 记得ctrl+f5强制刷新
 
