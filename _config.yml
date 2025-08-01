@@ -105,6 +105,7 @@ deploy:
   type: git
   repo: git@github.com:Xsuuu/Xsuuu.github.io.git
   branch: master
+  message: "更新博客 {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 
 # ==================================== live2D =========================================
