@@ -4,18 +4,87 @@
   
   
   <entry>
-    <title>博客日常更新指令</title>
-    <link href="/2025/07/15/hello-world/"/>
-    <url>/2025/07/15/hello-world/</url>
+    <title>Java-SE学习笔记3</title>
+    <link href="/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/"/>
+    <url>/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/</url>
     
-    <content type="html"><![CDATA[<p>指令集合：</p><blockquote><p> hexo cl&amp;&amp;hexo g&amp;&amp;hexo s<br>(清除缓存+生成更改+测试网页)<br> hexo d<br>(推送到服务器)</p></blockquote><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h5 id=""><a href="#" class="headerlink" title=""></a></h5>]]></content>
     
     
     <categories>
       
-      <category>Web</category>
+      <category>Java SE</category>
       
     </categories>
+    
+    
+    <tags>
+      
+      <tag>Note</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java-SE学习笔记2</title>
+    <link href="/2025/07/30/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
+    <url>/2025/07/30/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/</url>
+    
+    <content type="html"><![CDATA[<h5 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h5><blockquote><p>面向对象三大特征：封装、继承、多态</p><p>方法就是一种封装；private关键字也是一种封装</p><p>间接访问private成员变量，就是定义一对setter&#x2F;getter方法</p><p>boolean类型的getter方法不能写get111，要写is111</p><p>this.成员变量名，访问本类中的成员变量</p><p>构造方法：</p><p><img src="/img/cr/22.png"></p><p>即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter方法，方便后续修改</p><p>标准的类（Java bean）：所有成员变量都用的private修饰、无参方法、全参方法、每个成员变量都要用getter&#x2F;setter修饰</p><p>构造方法、getter&#x2F;setter自动补全：Code-&gt;Generate</p></blockquote><h5 id="Scanner、匿名对象、Random、Arraylist"><a href="#Scanner、匿名对象、Random、Arraylist" class="headerlink" title="Scanner、匿名对象、Random、Arraylist"></a>Scanner、匿名对象、Random、Arraylist</h5><blockquote><p>合理使用api文档，只有java.lang包下的内容不需要导包，其他都需要</p><p>引用类型的一般使用步骤：1.导包：地址.类名2.创建：类名称 对象名 &#x3D; new 类名称();3.使用：对象名.成员方法名</p><p><img src="/img/cr/23.png"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> sc.nextInt();<br><span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> sc.next();<br></code></pre></td></tr></table></figure><p>匿名对象：只使用唯一的一次</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().name = <span class="hljs-string">&quot;111&quot;</span>;<br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().showName();<br></code></pre></td></tr></table></figure><p>Random:.nextint()<strong>整个int范围</strong>；nextint(111)<strong>0(包括)到111(不包括)随机生成int数字</strong></p><p>数组长度不可改变，Arraylist长度可以改变</p><p>ArrayList<E> <strong><E>代表泛型，且只能是引用类型，不能是基本类型</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></figure><p>对于ArrayList，直接打印得到的不是地址，而是内容。如果内容为空，得到的是空的中括号：[]</p><p>list.add(111)添加元素；list.get(111)查看元素；list.remove移除元素；list.size()获取长度</p><p>想要存储基本类型就要使用包装类，包装类名称为首字母大写(如byte-&gt;Byte,特殊：int-&gt;Integer;char-&gt;Character)</p></blockquote><h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><blockquote><p>字符串是常量，他们的值在创建后不能更改，所以字符串可以共享使用</p><p>字符串效果上是char[]字符数组，但是底层原理是一个byte[]字节数组</p><p><img src="/img/cr/24.png"></p><p>注意：直接写上双引号，就是字符串对象（jvm帮忙new了）</p><p>字符串常量池：程序中只有直接写上双引号的字符串，才放在字符串常量池中</p><p>对于基本类型：&#x3D;&#x3D;进行数值的比较</p><p>对于引用类型：&#x3D;&#x3D;进行地址值的比较</p><p><img src="/img/cr/25.png"></p><p>要进行字符串内容的比较，使用函数：equals(Object obj)参数可以是任何对象，但只有参数是一个字符串且内容相同时才会给false。</p><p>str1.equals(str2)：str1不能为null值，会造成空指针异常；str2可以，只会warning不会报错。因此str1最好为常量，str2为变量</p><p>equalsIgnoreCase(String str)忽略大小写，进行内容比较</p><p><img src="/img/cr/26.png"></p><p><strong>substring</strong>: substring(int index);  substring(int begin,int end)(<strong>(begin,end]</strong>)</p><p>数字符索引值，从0开始，一个右箭头加一，切割想要的单词时，按住shift键右箭头继续加一</p><p><img src="/img/cr/27.png"></p><p>切割字符串：split(String regex)  切割为一个字符串数组</p><p>如果以”.”切割，必须以”\.”切割，否则切割不成功</p></blockquote><h5 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h5><blockquote><p>使用static关键字，内容属于类，凡本类对象都共享一份</p><p>修饰成员变量如共同教室，idCoounter</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> id;<br>   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">idCounter</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">(<span class="hljs-number">111</span>)</span> &#123;<br>       <span class="hljs-number">111</span><br>       id = ++idCounter;<br>   &#125;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span> &#123;<br>       id = ++idCounter;<br>   &#125;<br></code></pre></td></tr></table></figure><p>普通方法可以用<em>对象名.方法名</em>使用，静态方法还可以使用<em>类名.静态方法名</em>使用(推荐)</p><p><img src="/img/cr/28.png"></p><p><img src="/img/cr/29.png"></p><p>静态代码块：(静态内容总是优先于非静态内容)(第一次使用本类时执行唯一的一次)</p><p>常用用图：一次性地对静态成员变量进行赋值</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class 类名称&#123;<br><span class="hljs-keyword">static</span>&#123;<br><span class="hljs-number">111</span><br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java SE</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Note</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java-SE学习笔记</title>
+    <link href="/2025/07/27/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2025/07/27/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h5 id="十进制和二进制之间的转换"><a href="#十进制和二进制之间的转换" class="headerlink" title="十进制和二进制之间的转换"></a>十进制和二进制之间的转换</h5><blockquote><p><img src="/img/cr/2.png"></p><p>HEX-&gt;十六进制；DEC-&gt;十进制；OCT-&gt;八进制；BIN-&gt;二进制</p></blockquote><h5 id="计算机存储单位："><a href="#计算机存储单位：" class="headerlink" title="计算机存储单位："></a>计算机存储单位：</h5><blockquote><p><img src="/img/cr/4.png"></p><p><img src="/img/cr/1.png"></p></blockquote><h5 id="JDK、JRE和JVM之间的关系"><a href="#JDK、JRE和JVM之间的关系" class="headerlink" title="JDK、JRE和JVM之间的关系:"></a>JDK、JRE和JVM之间的关系:</h5><blockquote><p><img src="/img/cr/3.png"></p></blockquote><h5 id="HelloWord代码的编译运行："><a href="#HelloWord代码的编译运行：" class="headerlink" title="HelloWord代码的编译运行："></a>HelloWord代码的编译运行：</h5><blockquote><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd">javac HelloWorld.java<br>java HelloWorld<br></code></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HelloWorld</span> &#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>System.out.println(<span class="hljs-string">&quot;Hello World!!!&quot;</span>);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure></blockquote><h5 id="关键字、标识符和常量："><a href="#关键字、标识符和常量：" class="headerlink" title="关键字、标识符和常量："></a>关键字、标识符和常量：</h5><blockquote><p><img src="/img/cr/8.png"></p><p><img src="/img/cr/9.png"></p><ul><li><p>两个单引号之间不能什么都没有，也不能有两个及以上个字符</p></li><li><p>空常量不能直接打印输出</p></li></ul></blockquote><h5 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h5><blockquote><p><img src="/img/cr/10.png"></p><p><img src="/img/cr/11.png"></p></blockquote><p><img src="/img/cr/12.png"></p><h5 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h5><blockquote><p>自动和强制，自动类型转换必须是范围小的转换成范围大的</p><p>强制类型转换一般不推荐使用，可能会发生精度损失和数据溢出</p><p>byte&#x2F;short&#x2F;char在进行运算时，先变成int类型，再进行运算</p><p>boolean类型不能发送数据类型转换</p></blockquote><h5 id="ascii码"><a href="#ascii码" class="headerlink" title="ascii码"></a>ascii码</h5><blockquote><p>48-&gt;0;65-&gt;A;97-&gt;a</p><p><img src="/img/cr/13.png"></p></blockquote><h5 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h5><blockquote><p>运算时类型不统一时，结果会是数据类型范围大的那一个（字符串和任何数据类型连接都会变成字符串）</p><p>对于字符串，+号相当于拼接符</p><p>只有变量才能自增自减和赋值，常量不行</p><p>三元运算翻译必须两个表达式都符合左侧数据类型的要求</p><p>三元运算符的结果必须被使用</p><p>对于byte&#x2F;short&#x2F;char类型，如果右侧赋值的数值没有超过范围，javac编译器自动强制转换（byte）&#x2F;（short）&#x2F;（char）</p><p>赋值时右侧表达式全是常量，javac编译器直接得到结果，存储结果而非表达式</p></blockquote><h5 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h5><blockquote><p><img src="/img/cr/14.png"></p><p>do while循环的while后的分号不能忘记</p><p>死循环标准格式：while(true){}</p></blockquote><h5 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h5><blockquote><p><img src="/img/cr/15.png"></p><p>shift+f6  相同内容同时修改</p><p>psvm、5.fori、array.fori</p></blockquote><h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">sum</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>&#123;&#125;<br></code></pre></td></tr></table></figure><p>方法重载：方法名称一样，参数列表不一样（个数、类型、多类型顺序）（与方法返回值类型和参数名称无关）</p></blockquote><h5 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h5><blockquote><h5 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h5><blockquote><p>类型统一且长度不可变</p><p>动态初始化数组（创建数组时直接指定数据个数多少）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arrayA = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">300</span>];<br></code></pre></td></tr></table></figure><p>静态初始化</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">String[] arrayB = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[]&#123;<span class="hljs-string">&quot;d&quot;</span>, <span class="hljs-string">&quot;sddf&quot;</span>, <span class="hljs-string">&quot;gdd&quot;</span>&#125;;<br><span class="hljs-type">int</span>[] arrayC = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;<br></code></pre></td></tr></table></figure><p>动态初始化数组可以拆分成两步，而动态初始化不行</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arrayA;<br>arrayA = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">300</span>];<br></code></pre></td></tr></table></figure><p>直接打印数组，得到的是数组对应的内存地址哈希值</p><p><img src="/img/cr/16.png"></p></blockquote><h5 id="数组的内存"><a href="#数组的内存" class="headerlink" title="数组的内存"></a>数组的内存</h5><blockquote><p><img src="/img/cr/17.png"></p><p><img src="/img/cr/18.png"></p><p><img src="/img/cr/19.png"></p><p>所以叫引用类型</p></blockquote><h5 id="数组异常"><a href="#数组异常" class="headerlink" title="数组异常"></a>数组异常</h5><blockquote><p>如果访问数组元素的时候，索引编号并不存在，那么将会发生</p><p>数组索引越界异常</p><p>ArrayIndexOutOfBoundsException</p><p>数组没有进行new初始化，就会发生</p><p>空指针异常</p><p>NullPointerException</p></blockquote><h5 id="数组函数使用"><a href="#数组函数使用" class="headerlink" title="数组函数使用"></a>数组函数使用</h5><blockquote><p>获取数组的长度：array.length</p><p>遍历输出数组所有的值</p><p>Arrays.toString()数组转换为字符串</p></blockquote></blockquote><h5 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h5><blockquote><p>成员变量直接定义在类中，方法外面</p><p>成员方法不要写static关键字</p><p>类名称 对象名 &#x3D; new 类名称（）；</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Student</span> <span class="hljs-variable">stu</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br></code></pre></td></tr></table></figure><p><img src="/img/cr/20.png"></p><p>注意：方法并不是直接存放在堆里面，堆里面存放的只是堆在方法区的内存地址</p><p>当一个对象作为参数，传递到方法中时，实际上传递进去的是对象的地址值</p><p>对象作为返回值时，返回的值也是对象的地址值</p><p><img src="/img/cr/21.png"></p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java SE</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Note</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客日常更新指令</title>
+    <link href="/2025/07/15/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%8C%87%E4%BB%A4/"/>
+    <url>/2025/07/15/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%8C%87%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<p>指令集合：</p><blockquote><p> hexo cl&amp;&amp;hexo g&amp;&amp;hexo s<br>(清除缓存+生成更改+测试网页)<br> hexo d<br>(推送到服务器)</p></blockquote><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
+    
     
     
     <tags>

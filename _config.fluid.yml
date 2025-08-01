@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://xsuuu.cn
+url: https://xsuuu.github.io/project
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -182,9 +182,9 @@ links:
  
 ### 分类页设置
 categories:
-- [Web]
-- [Misc]
-- [Pwn]
+- [Java SE]
+- [Java Web]
+- [算法]
 
 ### 标签页设置
 tags:
@@ -320,7 +320,7 @@ code:
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: true # 开启音乐播放器
-  per_page: true #每个页面都有Aplayer
+  per_page: false #每个页面都有Aplayer
 #实现不会因跳转其他页面而重新播放音乐
 #相当于异步请求的ajax
 pjax:
