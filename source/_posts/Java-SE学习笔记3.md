@@ -17,7 +17,7 @@ tags: Note
 
 ##### Math相关函数
 
-> ![](E:\blog\source\img\cr\30.png)
+> ![](/img/cr/30.png)
 >
 > 四舍五入不带小数点
 >
@@ -33,7 +33,7 @@ tags: Note
 >
 > 子类对象  使用父类方法中  调用的数据是父类的(在父类中定义的)
 >
-> ![](E:\blog\source\img\cr\31.png)
+> ![](/img/cr/31.png)
 >
 > 重写(Override):方法名称和参数列表都一样，重载参数列表不一样(@Override)
 >
@@ -51,11 +51,11 @@ tags: Note
 >
 > 可以通过super关键字  从子类  构造  父类的重载构造
 >
-> ![](E:\blog\source\img\cr\32.png)
+> ![](/img/cr/32.png)
 >
-> ![](E:\blog\source\img\cr\33.png)
+> ![](/img/cr/33.png)
 >
-> ![](E:\blog\source\img\cr\34.png)
+> ![](/img/cr/34.png)
 >
 > 单继承、多级继承、多继承
 
