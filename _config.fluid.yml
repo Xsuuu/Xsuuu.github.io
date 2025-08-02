@@ -318,10 +318,10 @@ code:
       preprocess: true
 # ======================== 音乐播放器 ==========================
 # Inject the css and script (aplayer/meting)
-aplayerInject:
-  enable: true # 开启音乐播放器
-  per_page: false #每个页面都有Aplayer
+#aplayerInject:
+#  enable: true # 开启音乐播放器
+#  per_page: false #每个页面都有Aplayer
 #实现不会因跳转其他页面而重新播放音乐
 #相当于异步请求的ajax
-pjax:
-  enable: true
+#pjax:
+#  enable: true
