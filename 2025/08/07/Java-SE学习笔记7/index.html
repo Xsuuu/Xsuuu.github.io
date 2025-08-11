@@ -16,24 +16,24 @@
   <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="类与对象 面向对象三大特征：封装、继承、多态 方法就是一种封装；private关键字也是一种封装 间接访问private成员变量，就是定义一对setter&#x2F;getter方法 boolean类型的getter方法不能写get111，要写is111 this.成员变量名，访问本类中的成员变量 构造方法：  即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter">
+    <meta name="description" content="Collections 123Collections.addAll(array,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);&#x2F;&#x2F;往集合中添加一些元素Collections.shuffle(array);&#x2F;&#x2F;打乱集合顺序Collections.sort(array);&#x2F;&#x2F;将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Se">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-SE学习笔记2">
-<meta property="og:url" content="https://xsuuu.github.io/2025/07/30/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/index.html">
+<meta property="og:title" content="Java-SE学习笔记7">
+<meta property="og:url" content="https://xsuuu.github.io/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/index.html">
 <meta property="og:site_name" content="xsuuu">
-<meta property="og:description" content="类与对象 面向对象三大特征：封装、继承、多态 方法就是一种封装；private关键字也是一种封装 间接访问private成员变量，就是定义一对setter&#x2F;getter方法 boolean类型的getter方法不能写get111，要写is111 this.成员变量名，访问本类中的成员变量 构造方法：  即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter">
+<meta property="og:description" content="Collections 123Collections.addAll(array,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);&#x2F;&#x2F;往集合中添加一些元素Collections.shuffle(array);&#x2F;&#x2F;打乱集合顺序Collections.sort(array);&#x2F;&#x2F;将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Se">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xsuuu.github.io/img/bg/3.jpg">
-<meta property="article:published_time" content="2025-07-30T07:15:49.035Z">
-<meta property="article:modified_time" content="2025-08-11T07:42:01.677Z">
+<meta property="og:image" content="https://xsuuu.github.io/img/bg/8.jpg">
+<meta property="article:published_time" content="2025-08-07T11:37:43.977Z">
+<meta property="article:modified_time" content="2025-08-11T07:45:10.972Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/3.jpg">
+<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/8.jpg">
   
   
   
-  <title>Java-SE学习笔记2 - xsuuu</title>
+  <title>Java-SE学习笔记7 - xsuuu</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,13 +193,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/3.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg/8.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java-SE学习笔记2"></span>
+            <span id="subtitle" data-typed-text="Java-SE学习笔记7"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-30 15:15" pubdate>
-          2025年7月30日 下午
+        <time datetime="2025-08-07 19:37" pubdate>
+          2025年8月7日 晚上
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          897 字
+          911 字
         
       </span>
     
@@ -270,71 +270,67 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Java-SE学习笔记2</h1>
+            <h1 id="seo-header">Java-SE学习笔记7</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h5><blockquote>
-<p>面向对象三大特征：封装、继承、多态</p>
-<p>方法就是一种封装；private关键字也是一种封装</p>
-<p>间接访问private成员变量，就是定义一对setter&#x2F;getter方法</p>
-<p>boolean类型的getter方法不能写get111，要写is111</p>
-<p>this.成员变量名，访问本类中的成员变量</p>
-<p>构造方法：</p>
-<p><img src="/img/cr/Java-SE/22.png" srcset="/img/loading.gif" lazyload></p>
-<p>即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter方法，方便后续修改</p>
-<p>标准的类（Java bean）：所有成员变量都用的private修饰、无参方法、全参方法、每个成员变量都要用getter&#x2F;setter修饰</p>
-<p>构造方法、getter&#x2F;setter自动补全：Code-&gt;Generate</p>
+                <h5 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h5><blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Collections.addAll(array,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>);<span class="hljs-comment">//往集合中添加一些元素</span><br>Collections.shuffle(array);<span class="hljs-comment">//打乱集合顺序</span><br>Collections.sort(array);<span class="hljs-comment">//将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Set集合</span><br></code></pre></td></tr></table></figure>
+
+<p>sort被排序的集合里边存储的元素，必须实现Comparable，重写接口中的方法compareTo定义排序的规则</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Comparable</span>&lt;Person&gt; &#123;<br>	<span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compareTo</span><span class="hljs-params">(Person o)</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.getAge() - o.getAge();<span class="hljs-comment">//年龄升序排序</span><br>        <span class="hljs-comment">//return o.getAge() - this.getAge();//年龄降序排序</span><br>    &#125;<br>&#125;<span class="hljs-comment">//别忘了重写toString方法</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Comparable</strong>:自己和别人比较，自己需要实现Comparable接口，重写比较的规则compareTo方法</p>
+<p><strong>Comparator</strong>:相当于找一个第三方的裁判，比较两个</p>
 </blockquote>
-<h5 id="Scanner、匿名对象、Random、ArrayList"><a href="#Scanner、匿名对象、Random、ArrayList" class="headerlink" title="Scanner、匿名对象、Random、ArrayList"></a>Scanner、匿名对象、Random、ArrayList</h5><blockquote>
-<p>合理使用api文档，只有java.lang包下的内容不需要导包，其他都需要</p>
-<p>引用类型的一般使用步骤：1.导包：地址.类名2.创建：类名称 对象名 &#x3D; new 类名称();3.使用：对象名.成员方法名</p>
-<p><img src="/img/cr/Java-SE/23.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> sc.nextInt();<br><span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> sc.next();<br></code></pre></td></tr></table></figure>
-
-<p>匿名对象：只使用唯一的一次</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().name = <span class="hljs-string">&quot;111&quot;</span>;<br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().showName();<br></code></pre></td></tr></table></figure>
-
-<p>Random:.nextint()<strong>整个int范围</strong>；nextint(111)<strong>0(包括)到111(不包括)随机生成int数字</strong></p>
-<p>数组长度不可改变，Arraylist长度可以改变</p>
-<p>ArrayList<E>： <strong><E>代表泛型，且只能是引用类型，不能是基本类型</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
-
-<p>对于ArrayList，直接打印得到的不是地址，而是内容。如果内容为空，得到的是空的中括号：[]</p>
-<p>list.add(111)添加元素；list.get(111)查看元素；list.remove移除元素；list.size()获取长度</p>
-<p>想要存储基本类型就要使用包装类，包装类名称为首字母大写(如byte-&gt;Byte,特殊：int-&gt;Integer;char-&gt;Character)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java">Collections.sort(array, <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Integer&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Integer o1, Integer o2)</span> &#123;<br>                <span class="hljs-keyword">return</span> o1-o2;<span class="hljs-comment">//升序</span><br>                <span class="hljs-comment">//return o1 - o2;//降序</span><br>            &#125;<br>        &#125;);<span class="hljs-comment">//也可以排序自定义类</span><br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Person o1, Person o2)</span> &#123;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> o1.getAge()-o2.getAge();<span class="hljs-comment">//升序</span><br>                <span class="hljs-comment">//return o1 - o2;//降序</span><br>                <span class="hljs-keyword">if</span>(result == <span class="hljs-number">0</span>)&#123;<br>                    <span class="hljs-keyword">return</span> o1.getName().charAt(<span class="hljs-number">0</span>) - o2.getName().charAt(<span class="hljs-number">0</span>);<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    <span class="hljs-keyword">return</span> result;<br>                &#125;<br>            &#125;<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="Map集合"><a href="#Map集合" class="headerlink" title="Map&lt;K,V&gt;集合"></a>Map&lt;K,V&gt;集合</h5><blockquote>
+<h5 id="Map集合-1"><a href="#Map集合-1" class="headerlink" title="Map集合"></a>Map集合</h5><blockquote>
+<p>1.双列集合，一个元素包含两个值(key,value)，key和value一一对应</p>
+<p>2.key和value的数据类型可以相同，可以不同；key值不允许重复，value值可以重复</p>
+<p>3.Map集合保证key是唯一的：作为key的元素，必须重写hashCode和equals方法，以保证key唯一</p>
 </blockquote>
-<h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><blockquote>
-<p>字符串是常量，他们的值在创建后不能更改，所以字符串可以共享使用</p>
-<p>字符串效果上是char[]字符数组，但是底层原理是一个byte[]字节数组</p>
-<p><img src="/img/cr/Java-SE/24.png" srcset="/img/loading.gif" lazyload></p>
-<p>注意：直接写上双引号，就是字符串对象（jvm帮忙new了）</p>
-<p>字符串常量池：程序中只有直接写上双引号的字符串，才放在字符串常量池中</p>
-<p>对于基本类型：&#x3D;&#x3D;进行数值的比较</p>
-<p>对于引用类型：&#x3D;&#x3D;进行地址值的比较</p>
-<p><img src="/img/cr/Java-SE/25.png" srcset="/img/loading.gif" lazyload></p>
-<p>要进行字符串内容的比较，使用函数：equals(Object obj)参数可以是任何对象，但只有参数是一个字符串且内容相同时才会给false。</p>
-<p>str1.equals(str2)：str1不能为null值，会造成空指针异常；str2可以，只会warning不会报错。因此str1最好为常量，str2为变量</p>
-<p>equalsIgnoreCase(String str)忽略大小写，进行内容比较</p>
-<p><img src="/img/cr/Java-SE/26.png" srcset="/img/loading.gif" lazyload></p>
-<p><strong>substring</strong>: substring(int index);  substring(int begin,int end)(<strong>(begin,end]</strong>)</p>
-<p>数字符索引值，从0开始，一个右箭头加一，切割想要的单词时，按住shift键右箭头继续加一</p>
-<p><img src="/img/cr/Java-SE/27.png" srcset="/img/loading.gif" lazyload></p>
-<p>切割字符串：split(String regex)  切割为一个字符串数组</p>
-<p>如果以”.”切割，必须以”\.”切割，否则切割不成功</p>
+<h5 id="HashMap集合"><a href="#HashMap集合" class="headerlink" title="HashMap集合"></a>HashMap集合</h5><blockquote>
+<p>1.底层是哈希表，查询速度特别快，jdk1.8前后：数组＋单向链表&#x2F;红黑树(链表的长度超过8):提高查询的速度</p>
+<p>2.无序的集合，存储和取出元素的顺序有可能不一致</p>
+<p>3.HashSet就是只有key参数的HashMap,所以他的参数不允许重复</p>
 </blockquote>
-<h5 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h5><blockquote>
-<p>使用static关键字，内容属于类，凡本类对象都共享一份</p>
-<p>修饰成员变量如共同教室，idCoounter</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> id;<br>   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">idCounter</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">(<span class="hljs-number">111</span>)</span> &#123;<br>       <span class="hljs-number">111</span><br>       id = ++idCounter;<br>   &#125;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span> &#123;<br>       id = ++idCounter;<br>   &#125;<br></code></pre></td></tr></table></figure>
+<p><strong>HashTable</strong>:不能存储null值和null键，和Vector一样，再jdk1.2版本之后被更先进的集合(HashMap，ArrayList)取代了，但是Hashtable的子类Properties依然活跃在历史舞台</p>
+<p>properties集合是唯一和IO流相结合的集合</p>
+<h5 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h5><blockquote>
+<p>1.底层是哈希表＋链表(保证迭代的顺序)</p>
+<p>2.有序的集合，存储和取出元素的顺序是一致的</p>
+<p>3.和HashMap集合相似的，LinkedHashSet是只有key参数的LinkedHashMap，他的参数也不允许重复</p>
+</blockquote>
+<p><img src="/img/cr/Java-SE/54.png" srcset="/img/loading.gif" lazyload></p>
+<p>存储键值对时，key不重复直接存入，key重复替代原有value值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Map&lt;Integer,String&gt; map =<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
 
-<p>普通方法可以用<em>对象名.方法名</em>使用，静态方法还可以使用<em>类名.静态方法名</em>使用(推荐)</p>
-<p><img src="/img/cr/Java-SE/28.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="/img/cr/Java-SE/29.png" srcset="/img/loading.gif" lazyload></p>
-<p>静态代码块：(静态内容总是优先于非静态内容)(第一次使用本类时执行唯一的一次)</p>
-<p>常用用图：一次性地对静态成员变量进行赋值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class 类名称&#123;<br>	<span class="hljs-keyword">static</span>&#123;<br>		<span class="hljs-number">111</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
+<p>键值对数据类型最好用包装类，因为取出时可能是null值，不是包装类就会产生空指针异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">Set&lt;Integer&gt; set = map.keySet();<br>Iterator&lt;Integer&gt; itrt = set.iterator();<br><span class="hljs-keyword">while</span>(itrt.hasNext())&#123;<br>     <span class="hljs-type">Integer</span> <span class="hljs-variable">key</span> <span class="hljs-operator">=</span> itrt.next();<br>     System.out.println(map.get(key));<br>&#125;<br><span class="hljs-keyword">for</span>(Integer i:set) &#123;<br>     <span class="hljs-type">String</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> map.get(i);<br>     System.out.println(value);<br>&#125;<span class="hljs-comment">//可使用Iterator和增强for遍历</span><br></code></pre></td></tr></table></figure>
+
+<p>1.使用Map集合中的方法keySet()，把Map集合中所有的key取出存储到一个Set集合中</p>
+<p>2.遍历Set集合为Map集合的key，通过get(key)方法遍历value</p>
+<h5 id="Entry键值对对象"><a href="#Entry键值对对象" class="headerlink" title="Entry键值对对象"></a>Entry键值对对象</h5><p>当Map集合一创建，那么就会在Map集合中创建一个Entry对象，用来记录键与值(键值对对象，键与值的映射关系)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">EntrySet()<span class="hljs-comment">//把map集合内部的多个Entry对象取出来存储到一个Set集合中,再遍历Set集合中的每一个entry对象</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">Set&lt;Map.Entry&lt;Integer, String&gt;&gt; set = map.entrySet();<br><span class="hljs-type">Iterator</span> <span class="hljs-variable">itrt</span> <span class="hljs-operator">=</span> set.iterator();<br><span class="hljs-keyword">while</span>(itrt.hasNext())&#123;<br>      System.out.println(itrt.next());<br>&#125;<br><span class="hljs-keyword">for</span>(Map.Entry&lt;Integer, String&gt; entry:set)&#123;<br>      System.out.println(entry);<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="of-方法"><a href="#of-方法" class="headerlink" title=".of()方法"></a>.of()方法</h5><blockquote>
+<p><img src="/img/cr/Java-SE/55.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = List.of(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>);<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h5><blockquote>
+<p><img src="/img/cr/Java-SE/56.png" srcset="/img/loading.gif" lazyload></p>
+<ol>
+<li>f8：逐行执行程序</li>
+<li>f7：进入到方法中</li>
+<li>shift+f8：跳出方法</li>
+<li>f9：跳到下一个断点，如果没有下一个断点，就结束程序</li>
+<li>ctrl+f2：退出debug模式，停止程序</li>
+<li>Console：切换到控制台</li>
+</ol>
+</blockquote>
 
                 
               </div>
@@ -380,8 +376,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java-SE学习笔记2</div>
-      <div>https://xsuuu.github.io/2025/07/30/Java-SE学习笔记2/</div>
+      <div>Java-SE学习笔记7</div>
+      <div>https://xsuuu.github.io/2025/08/07/Java-SE学习笔记7/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +389,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月30日</div>
+          <div>2025年8月7日</div>
         </div>
       
       
@@ -425,9 +421,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" title="Java-SE学习笔记3">
+                      <a href="/2025/08/08/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/" title="Java-SE学习笔记8">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java-SE学习笔记3</span>
+                        <span class="hidden-mobile">Java-SE学习笔记8</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -435,8 +431,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/27/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" title="Java-SE学习笔记1">
-                        <span class="hidden-mobile">Java-SE学习笔记1</span>
+                      <a href="/2025/08/05/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06/" title="Java-SE学习笔记6">
+                        <span class="hidden-mobile">Java-SE学习笔记6</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

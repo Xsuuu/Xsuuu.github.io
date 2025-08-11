@@ -12,20 +12,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="XiaoSu">
+  <meta name="theme-color" content="#ffffffff">
+  <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
     <meta name="description" content="泛型 一种未知的数据类型，当我们不知道使用什么数据类型，就可以使用泛型 泛型也可以看做是一个变量，用来接受数据类型 E e:Element 元素         T t:Type 类型 创建集合对象，不使用泛型：默认类型是Object类型，可存储任意类型的数据；不安全，会引发异常 1ArrayList list &#x3D; new ArrayList();&#x2F;&#x2F;不写尖括号就是默认Object类型   123">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java-SE学习笔记6">
 <meta property="og:url" content="https://xsuuu.github.io/2025/08/05/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06/index.html">
-<meta property="og:site_name" content="Xsuuu">
+<meta property="og:site_name" content="xsuuu">
 <meta property="og:description" content="泛型 一种未知的数据类型，当我们不知道使用什么数据类型，就可以使用泛型 泛型也可以看做是一个变量，用来接受数据类型 E e:Element 元素         T t:Type 类型 创建集合对象，不使用泛型：默认类型是Object类型，可存储任意类型的数据；不安全，会引发异常 1ArrayList list &#x3D; new ArrayList();&#x2F;&#x2F;不写尖括号就是默认Object类型   123">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xsuuu.github.io/img/bg/7.jpg">
 <meta property="article:published_time" content="2025-08-05T12:43:44.253Z">
-<meta property="article:modified_time" content="2025-08-06T12:56:47.558Z">
+<meta property="article:modified_time" content="2025-08-11T07:44:47.002Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
   
   
   
-  <title>Java-SE学习笔记6 - Xsuuu</title>
+  <title>Java-SE学习笔记6 - xsuuu</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          516 字
+          1k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          5 分钟
+          9 分钟
         
       </span>
     
@@ -282,7 +282,7 @@
 <p>创建集合对象，不使用泛型：默认类型是Object类型，可存储任意类型的数据；不安全，会引发异常</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<span class="hljs-comment">//不写尖括号就是默认Object类型</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="E:\blog\source\img\cr\Java-SE\45.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/cr/Java-SE/45.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class <span class="hljs-number">111</span>&lt;E&gt;&#123;&#125;<span class="hljs-comment">//泛型类</span><br><span class="hljs-keyword">public</span> &lt;M&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">(M m)</span>&#123;&#125;<span class="hljs-comment">//泛型方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;S&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method2</span><span class="hljs-params">(S s)</span>&#123;&#125;<span class="hljs-comment">//泛型静态方法</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt; &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(I i)</span>;<span class="hljs-comment">//泛型接口的实现类有两种实现方法</span><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;String&gt;<span class="hljs-comment">//一种是在类的实现时就定义数据类型</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp2</span>&lt;I&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt;<span class="hljs-comment">//一种是在类的实现时不定义数据类型，使用时才定义数据类型</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h5><p>不知道使用什么类型来接收时，可以使用？，？代表未知通配符</p>
@@ -291,28 +291,57 @@
 
 <h5 id="通配符高级使用：受限泛型"><a href="#通配符高级使用：受限泛型" class="headerlink" title="通配符高级使用：受限泛型"></a>通配符高级使用：受限泛型</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">类型名称 &lt;? extends 类&gt; 对象名称<span class="hljs-comment">//泛型上限：只能接受该类型及其子类</span><br>类型名称 &lt;? <span class="hljs-built_in">super</span> 类&gt; 对象名称<span class="hljs-comment">//泛型下限：只能接受该类型及其父类</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="E:\blog\source\img\cr\Java-SE\46.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/cr/Java-SE/46.png" srcset="/img/loading.gif" lazyload></p>
 <p>会看就行</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Collections.shuffle(poker);<span class="hljs-comment">//collections混合排序方法</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h5><blockquote>
 <p>数据存储常用结构：栈、队列、数组、链表和红黑树</p>
-<h5 id="栈：先进后出"><a href="#栈：先进后出" class="headerlink" title="栈：先进后出"></a>栈：先进后出</h5><h5 id="队列：先进先出"><a href="#队列：先进先出" class="headerlink" title="队列：先进先出"></a>队列：先进先出</h5><p><img src="E:\blog\source\img\cr\Java-SE\47.png" srcset="/img/loading.gif" lazyload></p>
-<h5 id="数组：查询快，增删慢"><a href="#数组：查询快，增删慢" class="headerlink" title="数组：查询快，增删慢"></a>数组：查询快，增删慢</h5><p><img src="E:\blog\source\img\cr\Java-SE\48.png" srcset="/img/loading.gif" lazyload></p>
-<h5 id="链表：查询慢，增删快"><a href="#链表：查询慢，增删快" class="headerlink" title="链表：查询慢，增删快"></a>链表：查询慢，增删快</h5><p><img src="E:\blog\source\img\cr\Java-SE\49.png" srcset="/img/loading.gif" lazyload></p>
-<h5 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h5><p><img src="E:\blog\source\img\cr\Java-SE\50.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="栈：先进后出"><a href="#栈：先进后出" class="headerlink" title="栈：先进后出"></a>栈：先进后出</h5><h5 id="队列：先进先出"><a href="#队列：先进先出" class="headerlink" title="队列：先进先出"></a>队列：先进先出</h5><p><img src="/img/cr/Java-SE/47.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="数组：查询快，增删慢"><a href="#数组：查询快，增删慢" class="headerlink" title="数组：查询快，增删慢"></a>数组：查询快，增删慢</h5><p><img src="/img/cr/Java-SE/48.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="链表：查询慢，增删快"><a href="#链表：查询慢，增删快" class="headerlink" title="链表：查询慢，增删快"></a>链表：查询慢，增删快</h5><p><img src="/img/cr/Java-SE/49.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h5><p><img src="/img/cr/Java-SE/50.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
 <h5 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h5><blockquote>
-<p><img src="E:\blog\source\img\cr\Java-SE\51.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
+<h5 id=""><a href="#" class="headerlink" title=""></a><img src="/img/cr/Java-SE/51.png" srcset="/img/loading.gif" lazyload></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
 
-<p>实现类：ArrayList集合、LinkedList集合</p>
-<p>ArrayList集合数据存储的结构是数组结构，结合数组的特点，不应该用于增删操作多的地方</p>
-<p>LinkedList是链表结构，使用LinkedList集合特有的方法，不能使用多态</p>
-<p><img src="E:\blog\source\img\cr\Java-SE\52.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="实现类：ArrayList集合、LinkedList集合"><a href="#实现类：ArrayList集合、LinkedList集合" class="headerlink" title="实现类：ArrayList集合、LinkedList集合"></a>实现类：ArrayList集合、LinkedList集合</h5><p>ArrayList集合数据存储的结构是<strong>数组结构</strong>，结合数组的特点，不应该用于增删操作多的地方</p>
+<p>LinkedList是<strong>链表结构</strong>，使用LinkedList集合特有的方法，不能使用多态</p>
+<p><img src="/img/cr/Java-SE/52.png" srcset="/img/loading.gif" lazyload></p>
 <p>还有addLast()等效于add()</p>
 <p>ll.clear()清空</p>
+<h5 id="Vector集合-底层数组，单线程慢-了解就行"><a href="#Vector集合-底层数组，单线程慢-了解就行" class="headerlink" title="Vector集合(底层数组，单线程慢)(了解就行)"></a>Vector集合(底层数组，单线程慢)(了解就行)</h5><p>addElement();hasMoreElement();nextElement();elements();</p>
+</blockquote>
+<p>Set接口</p>
+<blockquote>
+<p>Set接口的方法和Collections的方法一样</p>
+<h5 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h5><p>特点：</p>
+<p>super(Collections);</p>
+<p>1.是一个无序的集合，存储元素和取出元素的顺序有可能不一致</p>
+<p>2.底层是一个哈希表结构(查询的速度非常快)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
+
+<p><strong>哈希值</strong>：是一个十进制的整数，由系统随机给出</p>
+<p>(就是对象的地址值，是一个逻辑地址，是模拟出来得到的地址，不是数据实际存储的物理地址)</p>
+<p>int hashCode() 返回该对象的哈希值</p>
+<blockquote>
+<p>public native int hashCode();(native代表该方法调用的是本地操作系统的方法)</p>
+<p>Stirng类重写了hashCode()方法，”重地”和”通话”字符串不一样，但是哈希值一样</p>
+</blockquote>
+<h5 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h5><p><img src="/img/cr/Java-SE/53.png" srcset="/img/loading.gif" lazyload></p>
+<p>set结合在调用add方法时，会调用元素的hashCode方法和equals方法，判断元素是否重复</p>
+<p>给HashSet中存放自定义类型元素时，需要重写对象中的hashCode和equals方法，建立自己的比较方式，才能保证HashSet集合中的对象唯一</p>
+<h5 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h5><p>底层是一个哈希表(数组+链表&#x2F;红黑树)+链表：多了一条链表(记录元素的存储顺序),保证元素有序</p>
+<p><strong>可变参数</strong></p>
+<p>当方法的参数列表数据类型已经确定，但是参数的个数不确定，就可以使用可变参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">修饰符 返回值类型 方法名(数据类型...变量名)&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可变参数底层是一个数组，根据参数个数不要，会创建不同长度的数组，来存储这些参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">double</span> b,<span class="hljs-type">int</span>...c)</span>&#123;&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(Object...obj)</span>&#123;&#125;<span class="hljs-comment">//可变参数的特殊(终极)写法</span><br></code></pre></td></tr></table></figure>
+
+<p>1.一个方法的参数列表，只能有一个可变参数</p>
+<p>2.如果方法的参数有多个，那么可变参数必须写在参数列表的末尾</p>
 </blockquote>
 
                 
@@ -366,7 +395,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>XiaoSu</div>
+          <div>xsuuu</div>
         </div>
       
       
@@ -403,6 +432,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/" title="Java-SE学习笔记7">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java-SE学习笔记7</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

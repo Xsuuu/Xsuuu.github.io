@@ -16,24 +16,24 @@
   <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="类与对象 面向对象三大特征：封装、继承、多态 方法就是一种封装；private关键字也是一种封装 间接访问private成员变量，就是定义一对setter&#x2F;getter方法 boolean类型的getter方法不能写get111，要写is111 this.成员变量名，访问本类中的成员变量 构造方法：  即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter">
+    <meta name="description" content="多线程 并发与并行并发：两个或多个时间在同一时间段内发生(交替执行) 并行：两个或多个时间在同一时刻发生(同时执行)  线程与进程进程：是指一个内存中运行的应用程序  线程：进程中的一个执行单元，复制当前进程中程序的执行，一个进程中至少有一个线程  一个程序运行后至少有一个进程，一个进程中可以包含多个线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-SE学习笔记2">
-<meta property="og:url" content="https://xsuuu.github.io/2025/07/30/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/index.html">
+<meta property="og:title" content="Java-SE学习笔记9">
+<meta property="og:url" content="https://xsuuu.github.io/2025/08/10/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/index.html">
 <meta property="og:site_name" content="xsuuu">
-<meta property="og:description" content="类与对象 面向对象三大特征：封装、继承、多态 方法就是一种封装；private关键字也是一种封装 间接访问private成员变量，就是定义一对setter&#x2F;getter方法 boolean类型的getter方法不能写get111，要写is111 this.成员变量名，访问本类中的成员变量 构造方法：  即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter">
+<meta property="og:description" content="多线程 并发与并行并发：两个或多个时间在同一时间段内发生(交替执行) 并行：两个或多个时间在同一时刻发生(同时执行)  线程与进程进程：是指一个内存中运行的应用程序  线程：进程中的一个执行单元，复制当前进程中程序的执行，一个进程中至少有一个线程  一个程序运行后至少有一个进程，一个进程中可以包含多个线程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xsuuu.github.io/img/bg/3.jpg">
-<meta property="article:published_time" content="2025-07-30T07:15:49.035Z">
-<meta property="article:modified_time" content="2025-08-11T07:42:01.677Z">
+<meta property="og:image" content="https://xsuuu.github.io/img/bg/10.jpg">
+<meta property="article:published_time" content="2025-08-10T09:21:43.151Z">
+<meta property="article:modified_time" content="2025-08-11T07:33:46.086Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/3.jpg">
+<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/10.jpg">
   
   
   
-  <title>Java-SE学习笔记2 - xsuuu</title>
+  <title>Java-SE学习笔记9 - xsuuu</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,13 +193,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/3.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg/10.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java-SE学习笔记2"></span>
+            <span id="subtitle" data-typed-text="Java-SE学习笔记9"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-30 15:15" pubdate>
-          2025年7月30日 下午
+        <time datetime="2025-08-10 17:21" pubdate>
+          2025年8月10日 下午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          897 字
+          134 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          8 分钟
+          2 分钟
         
       </span>
     
@@ -270,71 +270,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Java-SE学习笔记2</h1>
+            <h1 id="seo-header">Java-SE学习笔记9</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h5><blockquote>
-<p>面向对象三大特征：封装、继承、多态</p>
-<p>方法就是一种封装；private关键字也是一种封装</p>
-<p>间接访问private成员变量，就是定义一对setter&#x2F;getter方法</p>
-<p>boolean类型的getter方法不能写get111，要写is111</p>
-<p>this.成员变量名，访问本类中的成员变量</p>
-<p>构造方法：</p>
-<p><img src="/img/cr/Java-SE/22.png" srcset="/img/loading.gif" lazyload></p>
-<p>即使全参构造方法中已经存在this.111 &#x3D; 111;依然需要setter方法，方便后续修改</p>
-<p>标准的类（Java bean）：所有成员变量都用的private修饰、无参方法、全参方法、每个成员变量都要用getter&#x2F;setter修饰</p>
-<p>构造方法、getter&#x2F;setter自动补全：Code-&gt;Generate</p>
+                <h5 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h5><blockquote>
+<h5 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h5><p>并发：两个或多个时间在同一时间段内发生(交替执行)</p>
+<p>并行：两个或多个时间在同一时刻发生(同时执行)</p>
+<p><img src="E:\blog\source\img\cr\Java-SE\61.png" srcset="/img/loading.gif" lazyload></p>
+<h5 id="线程与进程"><a href="#线程与进程" class="headerlink" title="线程与进程"></a>线程与进程</h5><p>进程：是指一个内存中运行的应用程序</p>
+<p><img src="E:\blog\source\img\cr\Java-SE\62.png" srcset="/img/loading.gif" lazyload></p>
+<p>线程：进程中的一个执行单元，复制当前进程中程序的执行，一个进程中至少有一个线程</p>
+<p><img src="E:\blog\source\img\cr\Java-SE\63.png" srcset="/img/loading.gif" lazyload></p>
+<p>一个程序运行后至少有一个进程，一个进程中可以包含多个线程</p>
 </blockquote>
-<h5 id="Scanner、匿名对象、Random、ArrayList"><a href="#Scanner、匿名对象、Random、ArrayList" class="headerlink" title="Scanner、匿名对象、Random、ArrayList"></a>Scanner、匿名对象、Random、ArrayList</h5><blockquote>
-<p>合理使用api文档，只有java.lang包下的内容不需要导包，其他都需要</p>
-<p>引用类型的一般使用步骤：1.导包：地址.类名2.创建：类名称 对象名 &#x3D; new 类名称();3.使用：对象名.成员方法名</p>
-<p><img src="/img/cr/Java-SE/23.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> sc.nextInt();<br><span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> sc.next();<br></code></pre></td></tr></table></figure>
-
-<p>匿名对象：只使用唯一的一次</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().name = <span class="hljs-string">&quot;111&quot;</span>;<br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>().showName();<br></code></pre></td></tr></table></figure>
-
-<p>Random:.nextint()<strong>整个int范围</strong>；nextint(111)<strong>0(包括)到111(不包括)随机生成int数字</strong></p>
-<p>数组长度不可改变，Arraylist长度可以改变</p>
-<p>ArrayList<E>： <strong><E>代表泛型，且只能是引用类型，不能是基本类型</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
-
-<p>对于ArrayList，直接打印得到的不是地址，而是内容。如果内容为空，得到的是空的中括号：[]</p>
-<p>list.add(111)添加元素；list.get(111)查看元素；list.remove移除元素；list.size()获取长度</p>
-<p>想要存储基本类型就要使用包装类，包装类名称为首字母大写(如byte-&gt;Byte,特殊：int-&gt;Integer;char-&gt;Character)</p>
-</blockquote>
-<h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><blockquote>
-<p>字符串是常量，他们的值在创建后不能更改，所以字符串可以共享使用</p>
-<p>字符串效果上是char[]字符数组，但是底层原理是一个byte[]字节数组</p>
-<p><img src="/img/cr/Java-SE/24.png" srcset="/img/loading.gif" lazyload></p>
-<p>注意：直接写上双引号，就是字符串对象（jvm帮忙new了）</p>
-<p>字符串常量池：程序中只有直接写上双引号的字符串，才放在字符串常量池中</p>
-<p>对于基本类型：&#x3D;&#x3D;进行数值的比较</p>
-<p>对于引用类型：&#x3D;&#x3D;进行地址值的比较</p>
-<p><img src="/img/cr/Java-SE/25.png" srcset="/img/loading.gif" lazyload></p>
-<p>要进行字符串内容的比较，使用函数：equals(Object obj)参数可以是任何对象，但只有参数是一个字符串且内容相同时才会给false。</p>
-<p>str1.equals(str2)：str1不能为null值，会造成空指针异常；str2可以，只会warning不会报错。因此str1最好为常量，str2为变量</p>
-<p>equalsIgnoreCase(String str)忽略大小写，进行内容比较</p>
-<p><img src="/img/cr/Java-SE/26.png" srcset="/img/loading.gif" lazyload></p>
-<p><strong>substring</strong>: substring(int index);  substring(int begin,int end)(<strong>(begin,end]</strong>)</p>
-<p>数字符索引值，从0开始，一个右箭头加一，切割想要的单词时，按住shift键右箭头继续加一</p>
-<p><img src="/img/cr/Java-SE/27.png" srcset="/img/loading.gif" lazyload></p>
-<p>切割字符串：split(String regex)  切割为一个字符串数组</p>
-<p>如果以”.”切割，必须以”\.”切割，否则切割不成功</p>
-</blockquote>
-<h5 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h5><blockquote>
-<p>使用static关键字，内容属于类，凡本类对象都共享一份</p>
-<p>修饰成员变量如共同教室，idCoounter</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> id;<br>   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">idCounter</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">(<span class="hljs-number">111</span>)</span> &#123;<br>       <span class="hljs-number">111</span><br>       id = ++idCounter;<br>   &#125;<br><br>   <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span> &#123;<br>       id = ++idCounter;<br>   &#125;<br></code></pre></td></tr></table></figure>
-
-<p>普通方法可以用<em>对象名.方法名</em>使用，静态方法还可以使用<em>类名.静态方法名</em>使用(推荐)</p>
-<p><img src="/img/cr/Java-SE/28.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="/img/cr/Java-SE/29.png" srcset="/img/loading.gif" lazyload></p>
-<p>静态代码块：(静态内容总是优先于非静态内容)(第一次使用本类时执行唯一的一次)</p>
-<p>常用用图：一次性地对静态成员变量进行赋值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class 类名称&#123;<br>	<span class="hljs-keyword">static</span>&#123;<br>		<span class="hljs-number">111</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
 
                 
               </div>
@@ -380,8 +330,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java-SE学习笔记2</div>
-      <div>https://xsuuu.github.io/2025/07/30/Java-SE学习笔记2/</div>
+      <div>Java-SE学习笔记9</div>
+      <div>https://xsuuu.github.io/2025/08/10/Java-SE学习笔记9/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +343,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月30日</div>
+          <div>2025年8月10日</div>
         </div>
       
       
@@ -425,18 +375,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" title="Java-SE学习笔记3">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java-SE学习笔记3</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/27/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" title="Java-SE学习笔记1">
-                        <span class="hidden-mobile">Java-SE学习笔记1</span>
+                      <a href="/2025/08/08/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/" title="Java-SE学习笔记8">
+                        <span class="hidden-mobile">Java-SE学习笔记8</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
